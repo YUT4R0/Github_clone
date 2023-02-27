@@ -1,10 +1,16 @@
 import React from "react";
-import { Container } from "./styles";
+import { Container, Logo, Searchform, } from "./styles";
 
-const Header = () => {
+const Header:React.FC = () => {
   return (
     <Container>
-        <div>header</div>
+
+        <Logo />
+
+        <Searchform>
+          <input type="text" placeholder="Enter an username or a repository..." />
+        </Searchform>
+
     </Container>
   );
 }

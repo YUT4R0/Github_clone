@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Profile from './pages/Profile';
 import Repo from './pages/Repo';
+import GlobalStyles from './styles/GlobalStyles'
 
 function App() {
   return(
@@ -18,6 +19,8 @@ function App() {
       </Routes>
 
       <Footer />
+
+      <GlobalStyles />
 
     </BrowserRouter>
   )
