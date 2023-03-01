@@ -49,10 +49,13 @@ export const Searchform = styled.form`
 
     cursor: pointer;
 
+    color: var(--primary);
+
     font-size: .75rem;
 
     transition: width .2s cubic-bezier(.5, 0, 0, 1);
 
+    z-index: 1;
 
     @media (min-width: 32rem) {
 

@@ -6,7 +6,7 @@ export const Container = styled.div`
     align-items: flex-end;
     overflow: hidden;
 
-    padding: 1rem 1.25rem 0 .625rem;
+    padding: 1rem 1.25rem 0;
     border: 1px solid var(--border);
     border-radius: 10px;
 
@@ -27,7 +27,7 @@ export const Container = styled.div`
             fill: var(--calendar-scale-4);
         }
 
-        width: 54rem;
+        width: 53rem;
     }
 
     span {

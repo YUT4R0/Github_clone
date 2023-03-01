@@ -1,13 +1,33 @@
 import React from "react";
-import { Container, Main, ProfileInfo, ProfileContent, Repository, CalendarHeading, } from "./styles";
+import { Container, Main, ProfileInfo, ProfileContent, Repository, CalendarHeading, RepoIcon, Tab, } from "./styles";
 import RepoCard from "../../components/RepoCard";
 
 import ProfileData from "../../data"
 import RandomCalendar from "../../components/RandomCalendar";
 
 const Profile:React.FC = () => {
+
+  const ArrayOfRepo = [1, 2, 3, 4, 5, 6]
+
+  const TabContent = () => (
+    <div className="content">
+      <RepoIcon />
+      <span className="label">Repositories</span>
+      <span className="number">{ArrayOfRepo.length}</span>
+    </div>
+  )
+
   return (
     <Container>
+
+        <Tab className="desktop"> 
+          <div className="wrapper">
+            <span className="offset" />
+            <TabContent />
+          </div>
+          <span className="underline" />
+        </Tab>
+
         <Main>
           <ProfileInfo>
             <ProfileData
@@ -28,6 +48,12 @@ const Profile:React.FC = () => {
           </ProfileInfo>
 
           <ProfileContent>
+
+            <Tab className="mobile">
+              <TabContent />
+              <span className="underline" />
+            </Tab>
+
             <Repository>  
               <div className="repo-heading">
                 <h2>Main Porjects</h2>
@@ -36,7 +62,7 @@ const Profile:React.FC = () => {
 
               <div className="repo-body">
                 {
-                  [1, 2, 3, 4, 5, 6]
+                  ArrayOfRepo
                   .map(rep => (
                     <RepoCard
                       key={rep}

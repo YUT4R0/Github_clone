@@ -16,6 +16,11 @@ const IconCss = css`
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  @media (min-width: 48rem) {
+    margin-top: -2.25rem;
+    
+  }
 `;
 
 export const UserView = styled.div`
@@ -115,7 +120,7 @@ export const UserBio = styled.ul`
         font-size: .875rem;
         gap: .375rem;
 
-        span {
+        span, a {
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;

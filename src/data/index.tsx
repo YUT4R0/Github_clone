@@ -44,7 +44,7 @@ const data: React.FC<Props> = ({
   return (
     <Container>
         <UserView>
-            <Avatar src={avatar} alt={status} />
+            <Avatar src={avatar} title={status} />
 
             <div>
                 <h1>{nickname}</h1>
