@@ -83,7 +83,9 @@ const data: React.FC<Props> = ({
             {email && (
                 <li>
                     <EmailIcon />
-                    <span>{email}</span>
+                    <a href={email} rel="noreferrer" target="_blank">
+                        {email}
+                    </a>
                 </li>
             )} 
             {blog && (

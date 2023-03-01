@@ -7,8 +7,8 @@ import { LinkAlt } from '@styled-icons/boxicons-regular/LinkAlt'
 import { Clock } from '@styled-icons/fa-regular/Clock'
 
 const IconCss = css`
-    height: 1rem;
-    width: 1rem;
+    height: 1.125rem;
+    width: 1.125rem;
     fill: var(--icon);
     flex-shrink: 0;
 `
@@ -22,7 +22,7 @@ export const UserView = styled.div`
     display: flex;
     align-items: center;
 
-    gap: 1.5rem;
+    gap: .75rem;
 
     div {
         display: flex;
@@ -40,13 +40,30 @@ export const UserView = styled.div`
         }
     }
 
+    @media(min-width: 48rem) {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 `
 
 export const Avatar = styled.img`
     border-radius: 50%;
     width: calc(100vw / 5);
     cursor: pointer;
-    border: .25rem solid var(--gray);
+
+    border: calc(100vw/100) solid var(--gray);
+
+    @media(min-width: 48rem) {
+        border: calc(100vw/500) solid var(--gray);
+    }
+
+    transition: all .1s ease-in-out;
+
+    &:hover {
+        filter: brightness(.7);
+    }
+
 `
 
 export const FollowInfo = styled.ul`
@@ -71,6 +88,15 @@ export const FollowInfo = styled.ul`
             font-size: .925rem;
             color: var(--gray);
         }
+
+        cursor: pointer;
+
+        &:hover {
+            * {
+                color: var(--link);
+                fill: var(--link);
+            }
+        }
     }
 `
 
@@ -81,7 +107,7 @@ export const PeopleIcon = styled(PeopleOutline)`
 export const UserBio = styled.ul`
     display: flex;
     flex-direction: column;
-    gap: .625rem;
+    gap: .5rem;
 
     li {
         display: flex;
@@ -93,6 +119,15 @@ export const UserBio = styled.ul`
             overflow: hidden;
             text-overflow: ellipsis;
             white-space: nowrap;
+        }
+
+        a {
+            text-decoration: none;
+
+            &:hover {
+                color: var(--link);
+                text-decoration: underline;
+            }
         }
     }
 `
