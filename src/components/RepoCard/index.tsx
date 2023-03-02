@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { Container, TopSide, RepoIcon, BottomSide, StarIcon, ForkIcon, } from "./styles";
 
-interface Props {
+export interface Props {
   username: string
   reponame: string
   description ? : string

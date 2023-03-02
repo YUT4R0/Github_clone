@@ -5,7 +5,9 @@ const Header:React.FC = () => {
   return (
     <Container>
 
-        <Logo />
+        <a href="http://localhost:3000/">
+          <Logo title={"Go to home"}/>
+        </a>
 
         <Searchform>
           <SearchIcon/>
